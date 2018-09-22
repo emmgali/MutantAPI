@@ -26,3 +26,7 @@ app.listen(PORT, function(){
 app.get('/hola', function(req, res){
 	res.send('que tal?');	
 })
+
+app.get('/intro', function(req, res){
+	res.send('Hola Martin! Gracias por usar esta aplicación!');	
+})
