@@ -8,7 +8,7 @@ var mutantLogic = require("./mutantLogic.js");
 
 app.post('/mutant/', function (req, res) {
 
-  if(mutantLogic.detectMutant(req.body.dna)){
+  if(mutantLogic.isMutant(req.body.dna)){
   	res.sendStatus(200);
   }else{
   	res.sendStatus(403);

@@ -2,7 +2,7 @@
 //var chainToTest2 = ["ATGCGA", "CAGTGC", "TTATTT", "AGACGG", "GCGTCA", "TCACTG"];
 
 module.exports = {
-	detectMutant : function(chainToTest){
+	isMutant : function(chainToTest){
 
 	var chainsDetected = 0;
 
@@ -12,9 +12,7 @@ module.exports = {
 
 	return chainsDetected >= 1;
 	
-
-
-}
+	}
 }
 
 
