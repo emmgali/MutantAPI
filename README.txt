@@ -8,8 +8,8 @@ El proyecto fue hecho en nodeJS, y hosteada en la nube con Heroku.
 
 Nivel 1:
 
-El algoritmo diseñado se basa en recorrer la matriz cuatro veces, de las unicas formas que se pueden encontrar cadenas de letras. Esto es, en vertical, horizontal, y diagonal (ambos sentidos, / y \)
-EN
+El algoritmo diseñado se basa en recorrer la matriz cuatro veces, de las unicas formas que se pueden encontrar cadenas de letras. Esto es, en vertical, horizontal, y diagonal (ambos sentidos, / y \). A medida que las recorre se va acordando de las letras repetidas y empieza a contar repeticiones hasta obtener una cadena. En caso de cambiar de linea, columna o vertical, resetea sus variables.
+
 
 A nivel complejidad, su costo es O(4 * n^2), lo que equivaldria a O(n^2), igual al costo de recorrer toda la matriz.
 
@@ -38,7 +38,7 @@ Esta constaria de una tabla con las siguientes columnas: [id(integer), dna(text)
 Notar que el ADN se guarda todo junto como un unico string.
 Una vez hecha la conexion correctamente, la logica de la resolucion es bastante sencilla. Solo basta con añadir el dna pasado en el body cada vez que se llame a '/mutant' como a su vez indicando el resultado de isMutant en la columna del booleano correspondiente. (Todo esto siempre y cuando el DNA no este ingresado previamente en la base, sino el servicio siguiente no seria consistente) 
 
-Luego el servicio '/stats' no deberia hacer mas que obtener la cantidad de todos los ADN ingresados menos la cantidad de ADN mutantes. Esto es facil de obtener haciendo una query del estilo (SELECT * FROM adn_table) y (SELECT * FROM adn_table WHERE 'is_mutant' = true)
+Luego el servicio '/stats' no deberia hacer mas que obtener la cantidad de todos los ADN ingresados menos la cantidad de ADN mutantes. Esto es facil de obtener haciendo una query del estilo (SELECT * FROM adn_table) y (SELECT * FROM adn_table WHERE 'is_mutant' = true). Una vez obtenidos ambos registros, se toma su longitud y se divide entre ellos, devolviendo asi las 3 estadisticas solicitadas.
 
 
 Cualquier consulta ya tenes mi contacto. Muchas gracias!
