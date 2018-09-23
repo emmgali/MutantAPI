@@ -12,6 +12,7 @@ const pool = new Pool({
 	ssl: true
 });
 
+/*
 app.get('/db', async (req, res) => {
     try {
       const client = await pool.connect()
@@ -24,7 +25,7 @@ app.get('/db', async (req, res) => {
       res.send("Error " + err);
     }
 })
-
+*/
 
 app.post('/mutant/', function (req, res) {
 
