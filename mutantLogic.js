@@ -28,7 +28,8 @@ detectMutantHorizontalChains = function(chainToTest){
 		
 		for (var j = 0; j < n; j++) {
 			if(j == 0){ 
-				actualLetter = chainToTest[i][j]
+				actualLetter = chainToTest[i][j];
+				chainCounter = 0;
 			}else{
 				if (actualLetter === chainToTest[i][j]) {
 					chainCounter++;
@@ -60,7 +61,8 @@ detectMutantVerticalChains = function(chainToTest){
 		
 		for (var j = 0; j < n; j++) {
 			if(j == 0){ 
-				actualLetter = chainToTest[j][i]
+				actualLetter = chainToTest[j][i];
+				chainCounter = 0;
 			}else{
 				if (actualLetter === chainToTest[j][i]) {
 					chainCounter++;
@@ -123,6 +125,7 @@ detectMutantDiagonalChains = function(chainToTest){
 }
 
 
+//From an starting cell, run over the left-down diagonal(\)
 chainsOnDiagonalLeftDown = function(chainToTest, x, y){
 	
 	var actualLetter = '';
@@ -157,6 +160,7 @@ chainsOnDiagonalLeftDown = function(chainToTest, x, y){
 
 }
 
+//From an starting cell, run over the down-right diagonal(/)
 chainsOnDiagonalDownRight = function(chainToTest, x, y){
 	
 	var actualLetter = '';
