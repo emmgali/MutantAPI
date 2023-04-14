@@ -1,4 +1,3 @@
-Hola Martin! Gracias por recibir mi examen!
 
 En esta carpeta estan todos los archivos necesarios de la aplicacion.
 
@@ -39,9 +38,4 @@ Notar que el ADN se guarda todo junto como un unico string.
 Una vez hecha la conexion correctamente, la logica de la resolucion es bastante sencilla. Solo basta con añadir el dna pasado en el body cada vez que se llame a '/mutant' como a su vez indicando el resultado de isMutant en la columna del booleano correspondiente. (Todo esto siempre y cuando el DNA no este ingresado previamente en la base, sino el servicio siguiente no seria consistente) 
 
 Luego el servicio '/stats' no deberia hacer mas que obtener la cantidad de todos los ADN ingresados menos la cantidad de ADN mutantes. Esto es facil de obtener haciendo una query del estilo (SELECT * FROM adn_table) y (SELECT * FROM adn_table WHERE 'is_mutant' = true). Una vez obtenidos ambos registros, se toma su longitud y se divide entre ellos, devolviendo asi las 3 estadisticas solicitadas.
-
-
-Cualquier consulta ya tenes mi contacto. Muchas gracias!
-
-Emiliano.
 
